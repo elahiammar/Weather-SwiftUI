@@ -13,7 +13,9 @@ final class ResidentialViewControllerFactory: ResidentialViewControllerFactoryPr
     @MainActor
     public func makeHomeViewController() -> UIViewController {
         let viewModel = HomeViewModel(
-            getWeatherDetailsUseCase: GetWeatherDetailsUseCase(repository: weatherRepository)
+            saveWeatherUseCase: SaveWeatherUseCase(repository: weatherRepository),
+            getWeatherDetailsUseCase: GetWeatherDetailsUseCase(repository: weatherRepository),
+            getPersistedWeatherUseCase: GetPersistedWeatherUseCase(repository: weatherRepository)
         )
         return UIHostingController(rootView: HomeView(viewModel: viewModel))
     }

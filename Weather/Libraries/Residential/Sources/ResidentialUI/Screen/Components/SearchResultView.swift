@@ -25,7 +25,7 @@ public struct SearchResultView: View {
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation {
-                actionModel.onLocationSelected?()
+                actionModel.onWeatherSelected?()
             }
         }
         Spacer()
@@ -63,6 +63,6 @@ extension SearchResultView {
 
 public extension SearchResultView {
     struct UiActionModel {
-        let onLocationSelected: (() -> Void)?
+        let onWeatherSelected: (() -> Void)?
     }
 }

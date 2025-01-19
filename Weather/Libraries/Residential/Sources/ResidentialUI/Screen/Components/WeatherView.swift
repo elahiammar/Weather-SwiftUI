@@ -29,7 +29,11 @@ extension WeatherView {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 120, height: 120)
-            } placeholder: { }
+            } placeholder: { 
+                Circle()
+                    .foregroundStyle(Color.clear)
+                    .frame(width: 120, height: 120)
+            }
         }
     }
     

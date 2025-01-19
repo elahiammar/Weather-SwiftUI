@@ -4,19 +4,25 @@ import ResidentialDomain
 @MainActor
 public final class HomeViewModel: ObservableObject {
     @Published public var errorMessage: String?
-    @Published private(set) var locationSelected: Bool = false
+    @Published private(set) var weatherSelected: Bool = true
     @Published private(set) var weatherDetails: WeatherDetails?
     
+    private let saveWeatherUseCase: SaveWeatherUseCase
     private let getWeatherDetailsUseCase: GetWeatherDetailsUseCase
-
+    private let getPersistedWeatherUseCase: GetPersistedWeatherUseCase
+    
     @preconcurrency public init(
-        getWeatherDetailsUseCase: GetWeatherDetailsUseCase
+        saveWeatherUseCase: SaveWeatherUseCase,
+        getWeatherDetailsUseCase: GetWeatherDetailsUseCase,
+        getPersistedWeatherUseCase: GetPersistedWeatherUseCase
     ) {
+        self.saveWeatherUseCase = saveWeatherUseCase
         self.getWeatherDetailsUseCase = getWeatherDetailsUseCase
+        self.getPersistedWeatherUseCase = getPersistedWeatherUseCase
     }
 
     public func onAppear() async {
-        await loadWeatherDetails("")
+        await loadPersistedWeather()
     }
     
     public func onSearchWeather(_ text: String) async {
@@ -29,8 +35,9 @@ public final class HomeViewModel: ObservableObject {
         errorMessage = nil
     }
     
-    public func onLocationSelected()  {
-        locationSelected = true
+    public func onWeatherSelected(location: String)  {
+        weatherSelected = true
+        saveWeather(location: location)
     }
 
     private func loadWeatherDetails(_ searchText: String) async {
@@ -42,8 +49,21 @@ public final class HomeViewModel: ObservableObject {
         }
     }
     
+    private func loadPersistedWeather() async {
+        do {
+            weatherDetails = try await getPersistedWeatherUseCase.execute(with: ())
+        } catch {
+            removeData()
+            errorMessage = error.localizedDescription
+        }
+    }
+    
+    private func saveWeather(location: String) {
+        saveWeatherUseCase.execute(with: location)
+    }
+    
     private func removeData() {
         weatherDetails = nil
-        locationSelected = false
+        weatherSelected = false
     }
 }

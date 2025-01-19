@@ -24,6 +24,11 @@ public struct HomeView: View {
             mainView
             Spacer()
         }
+        .onAppear {
+            Task {
+                await viewModel.onAppear()
+            }
+        }
         .onChange(of: viewModel.errorMessage) { error in
             guard error != nil else { return }
             showAlert = true
@@ -50,13 +55,14 @@ extension HomeView {
                 EmptyView()
             case let .data(domainModel):
                 let uiModel = WeatherUiModel(weather: domainModel)
-                if !viewModel.locationSelected {
+                if !viewModel.weatherSelected {
                     SearchResultView(
                         uiModel: uiModel,
                         actionModel: .init(
-                            onLocationSelected: {
+                            onWeatherSelected: {
                                 withAnimation {
-                                    viewModel.onLocationSelected()
+                                    searchText = ""
+                                    viewModel.onWeatherSelected(location: uiModel.cityName)
                                 }
                             }
                         )
