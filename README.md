@@ -1,6 +1,6 @@
 # Weather App - SwiftUI
 
-Weather App iOS assignment built using SwiftUI and follows the Clean architecture pattern along with modular and protocol oriented approach. User can search location and select it to display the details. Selected location also persist in memory to load the data on relaunch.
+Weather App iOS assignment is built using SwiftUI and follows the Clean architecture pattern along with modular and protocol oriented approach. User can search location and select it to display the details. Selected location also persist in memory to load the data on relaunch.
 
 
 https://github.com/user-attachments/assets/5fce1e37-4708-4430-b239-26504660028c
