@@ -1,4 +1,20 @@
-# Weather App
-![Simulator Screenshot - iPhone 14 Pro Max - 2025-01-20 at 04 23 26](https://github.com/user-attachments/assets/a7b25a20-9c32-41b5-9108-ac1f7812a7a1)
-![Simulator Screenshot - iPhone 14 Pro Max - 2025-01-20 at 04 22 54](https://github.com/user-attachments/assets/6dd52f69-7766-47cd-a018-9fb4b5b18487)
-![Simulator Screenshot - iPhone 14 Pro Max - 2025-01-20 at 04 22 29](https://github.com/user-attachments/assets/c50fd439-b356-47cf-bae3-0a52cb3477af)
+Nooro Weather Test
+
+This is the result of my work on a take-home assignment from Nooro. The contents of this repository were completed in just under 5 hours.
+
+Getting Started
+
+Clone this repository and open it in Android Studio (Ladybug or newer)
+Open local.properties and add
+weatherApiKey="<your weatherapi key>"
+Click the green "Run" arrow to deploy to a connected or virtual device (must be API 28 or newer)
+Potential improvements
+
+Due to the time limitation, I was not able to complete everything. Imprevemnts that could be made given more time include
+
+Error handling
+Unit/Integration/UI tests
+Detect location using GNSS
+Load search results as you type, with throttling/debouncing
+Dark mode theme
+Add a circle progress indicator to the loading state
