@@ -1,20 +1,27 @@
-Nooro Weather Test
+# Weather App
 
-This is the result of my work on a take-home assignment from Nooro. The contents of this repository were completed in just under 5 hours.
+Weather App iOS assignment built using SwiftUI and follows the Clean architecture pattern along with modular and protocol oriented approach. User can search location and select it to display the details. Selected location also persist in memory to load the data on relaunch.
 
-Getting Started
+## Requirements
 
-Clone this repository and open it in Android Studio (Ladybug or newer)
-Open local.properties and add
-weatherApiKey="<your weatherapi key>"
-Click the green "Run" arrow to deploy to a connected or virtual device (must be API 28 or newer)
-Potential improvements
+Minimum iOS version 15.0
 
-Due to the time limitation, I was not able to complete everything. Imprevemnts that could be made given more time include
+## Getting Started
 
-Error handling
-Unit/Integration/UI tests
-Detect location using GNSS
-Load search results as you type, with throttling/debouncing
-Dark mode theme
-Add a circle progress indicator to the loading state
+Open WeatherEndpoint.swift and replace apiKey = "your weatherapi key" if needed.
+
+## Frameworks/Architecture:
+
+. SwiftUI
+
+. Clean Architecture
+
+. Modularization
+
+. Dependency Injection
+
+. Protocol Oriented Approach
+
+. Swift Concurrency Async/Await
+
+. XCTest Framework
