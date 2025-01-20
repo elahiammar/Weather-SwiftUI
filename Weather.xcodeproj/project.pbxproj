@@ -46,7 +46,6 @@
 			children = (
 				275F9C952D38C0FC0031C6E8 /* Weather */,
 				275F9C942D38C0FC0031C6E8 /* Products */,
-				277E7D1E2D398FB400073D2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,13 +84,6 @@
 				275F9CB22D38C1C60031C6E8 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		277E7D1E2D398FB400073D2C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		277E7D2B2D39ABCD00073D2C /* Libraries */ = {
