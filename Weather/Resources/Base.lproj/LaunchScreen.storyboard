@@ -17,16 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="M03-4s-GPL">
-                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
-                                <color key="color" systemColor="darkTextColor"/>
-                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VuO-1M-Kxv">
+                                <rect key="frame" x="139.33333333333334" y="393.33333333333331" width="114.66666666666666" height="65.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nooro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dC-Am-2Pm">
+                                        <rect key="frame" x="20" y="0.0" width="74.333333333333329" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXa-Wn-Mvo">
+                                        <rect key="frame" x="0.0" y="41.666666666666686" width="114.66666666666667" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="M03-4s-GPL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RET-E9-ebB"/>
-                            <constraint firstItem="M03-4s-GPL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lFk-57-XeX"/>
+                            <constraint firstItem="VuO-1M-Kxv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qvu-wn-p2o"/>
+                            <constraint firstItem="VuO-1M-Kxv" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WMR-Ae-FDD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,9 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="darkTextColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
