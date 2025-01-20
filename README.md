@@ -11,9 +11,9 @@ Minimum iOS version 15.0
 
 ## Getting Started
 
-. Open WeatherEndpoint.swift and replace apiKey = "your weatherapi key" if needed. 
+. Open WeatherEndpoint.swift and replace apiKey = "Your WeathArapi Key" if needed. 
 
-. Might need sometimes delete derived data, restart Xcode and clean build and run if Xcode shows some unusual errors.
+. Might need sometimes delete derived data, restart Xcode, clean build and run if Xcode shows some unusual errors.
 
 ## Frameworks/Architecture:
 
