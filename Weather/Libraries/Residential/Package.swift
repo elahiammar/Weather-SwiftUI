@@ -45,7 +45,8 @@ let package = Package(
             name: "ResidentialTests",
             dependencies: [
                 "ResidentialData",
-                "ResidentialDomain"
+                "ResidentialDomain",
+                "ResidentialUI"
             ]
         ),
     ]
